@@ -1,0 +1,222 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+
+@font-face {
+    font-family: 'Android';
+    src: url('../fontes/idroid.otf') format('opentype');
+    font-weight: normal;
+}
+ /*Configurações raiz*/
+:root{ 
+    --cor0: #ebe5c5;
+    --cor1:#83e1ad;
+    --cor2: #3ddc84;
+    --cor3: #2fa866;
+    --cor4: #1a5c37;
+    --cor5: #063d1e;
+/*Declarando as variáveis*/
+    --fonte-padrao: Arial, Verdana, Helvetica, sans-serif;
+    --fonte-destaque: 'Bebas Neue', cursive;
+    --fonte-android: 'Android', cursive;
+}
+/*o seletor * aplica a configuração a todos os elementos de uma vez.*/
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background-color: var(--cor0);
+    font-family: var(--fonte-padrao);
+}
+/*configura a class para inserir o incone de link externo no link
+configura no Link a Class Externo Sub classe da Classe*/
+a.externo::after{
+    content: '\00A0\1F517';
+}
+/*configurações do cabeçalho*/
+header{
+    background-color: var(--cor4);
+    min-height: 150px;
+    text-align: center;
+    padding-top: 40px;
+    /*inserindo um gradiente na cor do cabeçalho, bottom(gradiente para baixo)*/
+    background-image: linear-gradient(to bottom, var(--cor3), var(--cor5));
+}
+/*Configurações do titulo que esta no cabeçalho*/
+header > h1 {
+    color: white;
+    font-family: var(--fonte-destaque);
+    font-size: 3em;
+    font-weight: normal;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.689);
+}
+/*Configurações do parágrafo que esta no cabeçalho*/
+header > p{
+    font-family: var(--fonte-padrao);
+    font-size: 1.2em;
+    color: white ;
+    max-width: 600px;
+    padding-right: 10px;
+    padding-left: 10px;
+    margin: auto;
+    margin-bottom: 30px;
+    /*sombra no texto*/
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.689);
+}
+/*aqui esta configrado o espaço onde estão os links da pagina*/
+nav{
+    background-color: var(--cor5);
+    padding: 10px;
+    box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.718);
+}
+/*aqui esta sendo cofigurado como será msotrado os links da pagina */
+nav > a{
+    color: var(--cor1);
+    padding: 10px;
+    /*tira o sublinhado do link e toda configuração padrão*/
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    /*trasnition duration cria um efeito na tasnsição do botao(links) ao passar o mouse, juntamente com a hover.*/
+    transition-duration: 0.5s;
+}
+/*usando a subClasse hover para mudar o estado dos botoes(link) ao passar o mouse*/
+nav > a:hover{
+    background-color: var(--cor3);
+    color: var(--cor5);    
+}
+/*o corpo maio do site*/
+main{
+    min-width: 300px;
+    max-width: 1000px;
+    margin: auto;
+    margin-bottom: 30px;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.622);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+div.video{
+    background-color: var(--cor5);
+    margin: 0px -20px 30px -20px;
+    padding: 20px; 
+    padding-bottom: 57%;
+    position: relative;
+}
+
+div.video > iframe{
+    position: absolute;
+    top:5% ;
+    left:5% ;
+    width:90% ;
+    height: 90%;
+}
+
+
+/*aqui configura os titulos h1 que estejam, dentro do corpo maior do site*/
+main h1{
+    color: var(--cor5);
+    font-family: var(--fonte-android);
+    font-weight: normal;
+    font-size: 1.8em;
+}
+/*aqui configura os titulos h2 que estejam, dentro do corpo maior do site*/
+main h2{
+    color: var(--cor4);
+    font-family: var(--fonte-android);
+    font-size: 1.3em;
+    font-weight: normal;
+    /*essa linha esta sendo configurado os titulos h2 com efeito gradiente para trasnparente*/
+    background-image: linear-gradient(to right, var(--cor1), transparent);
+    text-indent: 8px;
+}
+/*aqui configura as imagens que estejam, dentro do corpo maior do site*/
+main img{
+    width: 100%; 
+}
+/*configura o espaço onde será mostrado a imagem usada na responsividade*/
+main img.pequena{
+    /*definindo o tamanho maximo para a foto*/
+    max-width: 350px;
+    /*torna a imagem como um bloco para que seja aplicada margin auto e centralizar.*/
+    display: block;
+    margin: auto;
+}
+/*text ident dá um recuo no texto do tamanho que vc configura. Como paragrafo.*/
+main p {
+    margin: 15px 0px;
+    /*centraliza ou justifica o texto */
+    text-align: justify;
+    text-indent: 30px; 
+    /*espaçamento entre linhas altura.*/
+    line-height: 2em;
+    font-size: 1em;
+}
+/*Configura todos as palavras marcadas com Strong*/
+main strong{
+    color: var(--cor4);
+    font-weight: bolder;
+    padding: 2px 6px;
+}
+/*Configura todos os links, formato cmoo eles aparecem na tela*/
+main a{
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--cor5);
+    background-color: var(--cor1);
+    padding: 2px 6px;
+}
+/*Configura todos as palavras marcadas com links, ao passar o mouse ela muda de cor e inclui o sublinhado*/
+main a:hover{
+    text-decoration: underline;
+    color: var(--cor4);
+}
+/*Configura o conteudo que esta dentro das tags ASIDE*/
+aside{
+    background-color: var(--cor1);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.675);
+}
+aside> h3{
+    background-color: var(--cor4);
+    color: white;
+    padding: 10px; 
+    /*margin negativa vaxa um pouco pra fora cima esquerda direita*/
+    margin: -10px -10px 0px -10px;
+    /*arredonda oc anto superior direito e esquerdo.*/
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    
+}
+/*configura a listae de foma geral como os seus itens sao mostrados.*/
+aside > ul{
+/*configura um simbolo de check nos itens da lista.*/
+    list-style-type:' \2714\00A0';
+/*Coloca as bolinhas dos itenns da lista para dentro do corpo asside*/
+    list-style-position: inside;
+/*divide os intens da lista em 2 colunas*/
+    columns: 2;
+}
+/*configura o rodape do site*/
+footer{
+    background-color: var(--cor5);
+    color: white;
+    text-align: center;
+    font-size: 0.8em;
+    padding: 5px;
+}
+footer a{
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+footer a:hover{
+    text-decoration: underline;
+    color: var(--cor1);
+}
