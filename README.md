@@ -4,5 +4,7 @@ Link para acesso ao site criado nesse projeto.
 
 https://mariliasantoz.github.io/projeto-android/
 
+QR CODE para acesso ao site:
 
-![61659754](https://user-images.githubusercontent.com/44656301/223447736-ca617dcb-8e0a-45b2-a424-10202613f429.png)
+![QRCode_Fácil](https://user-images.githubusercontent.com/44656301/223448698-a65eef63-314d-4236-bd51-e318f18e790b.jpg)
+
